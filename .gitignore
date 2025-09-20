@@ -1,0 +1,22 @@
+# CMake / Build files
+/build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled Object files
+*.o
+*.a
+*.so
+
+# Executable
+/ChordTool
+
+# macOS
+.DS_Store
+
+# IDE-specific
+.idea/
+.vscode/
+*.user
