@@ -11,7 +11,12 @@ const std::vector<std::string> Chord::allNotes = {
 // Minor: Root, Minor Third (3 semitones), Perfect Fifth (7 semitones)
 const std::map<std::string, std::vector<int>> Chord::chordFormulas = {
     {"Major", {0, 4, 7}},
-    {"Minor", {0, 3, 7}}
+    {"Minor", {0, 3, 7}},
+    {"Diminished", {0, 3, 6}},
+    {"Augmented", {0, 4, 8}},
+    {"Dominant 7th", {0, 4, 7, 10}},
+    {"Major 7th", {0, 4, 7, 11}},
+    {"Minor 7th", {0, 3, 7, 10}}
 };
 
 Chord::Chord(const std::string& rootNote, const std::string& chordType)

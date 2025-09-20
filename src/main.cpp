@@ -48,6 +48,11 @@ int main(int argc, char *argv[])
     }
     chordTypeCombo->addItem("Major");
     chordTypeCombo->addItem("Minor");
+    chordTypeCombo->addItem("Diminished");
+    chordTypeCombo->addItem("Augmented");
+    chordTypeCombo->addItem("Dominant 7th");
+    chordTypeCombo->addItem("Major 7th");
+    chordTypeCombo->addItem("Minor 7th");
 
     inputLayout->addWidget(new QLabel("Root Note:", centralWidget));
     inputLayout->addWidget(rootNoteCombo);
