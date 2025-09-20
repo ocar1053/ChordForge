@@ -54,12 +54,16 @@ std::vector<std::string> Chord::getNotes() const
 
 std::vector<std::string> Chord::getInversion(unsigned int inversionNumber) const
 {
-    if (m_notes.empty() || inversionNumber == 0) {
+    if (m_notes.empty()) {
         return m_notes;
     }
 
+    int effectiveInversion = inversionNumber % m_notes.size();
+    if (effectiveInversion == 0) {
+        return m_notes;
+    }
     std::vector<std::string> inversion = m_notes;
-    for (unsigned int i = 0; i < inversionNumber; ++i) {
+    for (unsigned int i = 0; i < effectiveInversion; ++i) {
         if (inversion.empty()) break;
         // Move the bottom note to the end of the vector (conceptually an octave higher)
         inversion.push_back(inversion.front());
