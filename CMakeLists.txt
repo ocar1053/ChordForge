@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(ChordTool VERSION 1.0 LANGUAGES CXX)
+project(ChordForge VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,10 +13,11 @@ set(CMAKE_AUTORCC ON)
 find_package(Qt6 COMPONENTS Widgets REQUIRED)
 
 # Add the executable
-add_executable(ChordTool
+add_executable(ChordForge
     src/main.cpp
     src/Chord.cpp
+    src/PianoWidget.cpp
 )
 
 # Link against the Qt libraries
-target_link_libraries(ChordTool PRIVATE Qt6::Widgets)
+target_link_libraries(ChordForge PRIVATE Qt6::Widgets)
